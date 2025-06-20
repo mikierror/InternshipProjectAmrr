@@ -9,6 +9,7 @@ export default function ViewItems() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // ✅ Delete item from localStorage and update UI
   const handleDelete = async (id) => {
     const confirmed = window.confirm("Are you sure you want to delete this item?");
     if (!confirmed) return;
@@ -17,20 +18,23 @@ export default function ViewItems() {
     if (ok) {
       setItems((prev) => prev.filter((item) => item.id !== id));
     } else {
-      alert("❌ Failed to delete item from database.");
+      alert("❌ Failed to delete item.");
     }
   };
 
+  // ✅ Load items from localStorage
   useEffect(() => {
-    getItems()
-      .then((data) => {
+    const loadItems = async () => {
+      try {
+        const data = await getItems();
         setItems(data);
+      } catch (err) {
+        setError("❌ Failed to load items.");
+      } finally {
         setLoading(false);
-      })
-      .catch(() => {
-        setError("❌ Failed to load items. Please try again later.");
-        setLoading(false);
-      });
+      }
+    };
+    loadItems();
   }, []);
 
   return (
@@ -59,7 +63,7 @@ export default function ViewItems() {
                 key={item.id}
                 item={{
                   ...item,
-                  coverImage: item.coverImage || "https://via.placeholder.com/300x200?text=No+Image"
+                  coverImage: item.coverImage || "https://placehold.co/300x200?text=No+Image"
                 }}
                 onClick={setSelected}
                 onDelete={handleDelete}
