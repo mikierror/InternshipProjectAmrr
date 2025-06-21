@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 🛍️ Item Vault – Inventory Manager
 
 A responsive and modern inventory management web application built with **React**, **Tailwind CSS**, and **localStorage** for data persistence. Users can:
@@ -92,3 +93,6 @@ This project is licensed under the MIT License.
 =======
 # Internship-Project-Amrr
 >>>>>>> aac50836bc7798647762b62a0f3dcf208f949eb5
+=======
+# InternshipProjectAmrr
+>>>>>>> 02ef089167287b3b838efe76f93cfa461b850cdd
