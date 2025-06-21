@@ -14,9 +14,9 @@ A responsive and modern inventory management web application built with **React*
 
 ## 🚀 Demo
 
-GitHub Repo: [https://github.com/mikierror/Amr-Internship-Project.git](https://github.com/mikierror/Amr-Internship-Project.git)
+GitHub Repo: https://github.com/mikierror/InternshipProjectAmrr.git
 
-Live Demo: *(Add Vercel/Netlify link here once deployed)*
+Live Demo: https://6856229bafb3ac3d0f11ea9d--playful-melomakarona-252b2b.netlify.app/
 
 ---
 
@@ -34,19 +34,15 @@ Live Demo: *(Add Vercel/Netlify link here once deployed)*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/mikierror/Amr-Internship-Project.git
-cd Amr-Internship-Project
+git clone https://github.com/mikierror/InternshipProjectAmrr.git
+cd InternProjectAmrr
 2. Install Dependencies
-bash
-Copy
-Edit
+
 npm install
 Tailwind CSS version: v3.4.17
 
 3. Start the React App
-bash
-Copy
-Edit
+
 npm start
 Now visit: http://localhost:3000
 
@@ -60,8 +56,7 @@ Now visit: http://localhost:3000
 
 📁 Folder Structure
 css
-Copy
-Edit
+
 src/
 ├── components/
 │   ├── ItemCard.jsx
