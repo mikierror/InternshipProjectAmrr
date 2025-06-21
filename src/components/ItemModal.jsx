@@ -8,22 +8,23 @@ export default function ItemModal({ item, onClose }) {
   const handleEnquire = () => {
     setSending(true);
 
-  const templateParams = {
-  item_name: item.name,
-  item_type: item.type,
-  message: `User enquired about ${item.name}`,
-  user_email: "suryanshkaintura07@gmail.com", // the receiver
-  title: "Item Enquiry",
-  time: new Date().toLocaleString(), // optional if you use {{time}}
-  name: "AMRR Website Enquiry",      // used in From Name
-  email: "noreply@amrr.com"          // used in Reply To
-};
+    const templateParams = {
+      item_name: item.name,
+      item_type: item.type,
+      message: `User enquired about ${item.name}`,
+      user_email: "suryanshkaintura07@gmail.com",
+      title: "Item Enquiry",
+      time: new Date().toLocaleString(),
+      name: "AMRR Website Enquiry",
+      email: "noreply@amrr.com"
+    };
+    ;
     emailjs
       .send(
-        'service_qxvg36n',     
-        'template_z6zi51q',   
+        'service_qxvg36n',
+        'template_z6zi51q',
         templateParams,
-        '5IZTa2iX7dgTavTqx'     
+        '5IZTa2iX7dgTavTqx'
       )
       .then((response) => {
         alert("✅ Enquiry sent successfully!");
@@ -40,7 +41,7 @@ export default function ItemModal({ item, onClose }) {
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center px-4">
       <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white dark:bg-gray-900 text-gray-800 dark:text-white rounded-3xl p-6 shadow-2xl animate-fadeIn">
 
-     
+
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-2xl text-gray-500 dark:text-gray-400 hover:text-red-500 transition"
