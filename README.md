@@ -13,7 +13,7 @@ A responsive and modern inventory management web application built with **React*
 ## 🚀 Demo
 
 - **GitHub Repo**: [https://github.com/mikierror/InternshipProjectAmrr]
-- **Live Demo**: [https://6856229bafb3ac3d0f11ea9d--playful-melomakarona-252b2b.netlify.app/]
+- **Live Demo**: [https://68562eec579051ef31a29ff0--playful-melomakarona-252b2b.netlify.app/]
 ---
 
 ## 🛠️ Tech Stack
